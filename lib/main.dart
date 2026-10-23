@@ -20,18 +20,42 @@ class Sleepy extends StatelessWidget {
             icon: const Icon(Icons.menu),
             onPressed: doSomething ,
           ),
-          backgroundColor: Colors.yellow,
-          title: const Text('Sleepyaf'),
+          backgroundColor: Colors.red,
+          title: const Text('Profile'),
+          centerTitle: false,
         ),
-        body: const Center(
+        body:  Center(
           child: Column(
-            children: [SizedBox(height: 20,),
-              Text('Hello, world!'),
-              Text('Hello, world!'),
-              Text('Hello, world!'),
-              Text('Hello, world!'),
-              Text('Hello, world!'),
-              
+            children: [
+            const SizedBox(height: 20,),
+            ClipOval(
+              child: Image.asset(
+                'assets/image/Amba Tu Kang copy.jpeg',
+                width: 200,
+                height: 200,
+                fit: BoxFit.cover
+              ),
+            ),
+            const SizedBox(height: 10,),
+            const Text("Amba Tu Kang", 
+            style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),),
+              Container(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 16.0,
+                  vertical: 6),
+                  decoration: BoxDecoration(
+                  color: const Color.fromARGB(255, 231, 48, 115),
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                child: const Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Icon(Icons.school, color: Color.fromARGB(255, 236, 249, 247), size: 16,),
+                    SizedBox(width: 4,),
+                    Text("Student", style: TextStyle(color: Colors.white, fontSize: 16)),
+                  ]
+                )
+              )
             ],
           ),
         ),
